@@ -1,17 +1,13 @@
-﻿using eBilet.Models;
+﻿using eBilet.Data.Base;
+using eBilet.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace eBilet.Data.Services
 {
-    public interface IActorsService
+    public interface IActorsService:IEntityBaseRepository<Actor>
     {
-        Task<IEnumerable<Actor>> GetAllAsync();
-        Task<Actor> GetByIdAsync(int id);
-        Task AddAsync(Actor actor);
-        Actor Update(int id, Actor newActor);
-        void Delete(int id);
-    
+
 
     }
 }
